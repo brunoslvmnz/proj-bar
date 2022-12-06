@@ -1,0 +1,1383 @@
+{
+	"info": {
+		"_postman_id": "6e1fda01-a1b9-448f-a40a-000446173874",
+		"name": "proj-bar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23040083"
+	},
+	"item": [
+		{
+			"name": "Garcom",
+			"item": [
+				{
+					"name": "Pedido",
+					"item": [
+						{
+							"name": "Criar pedido",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"ABERTO\",\r\n    \"viagem\": false,\r\n    \"garcom\": {\r\n        \"id\": \"638d3c9ded4a5b33c673f8a9\",\r\n        \"nome\": \"Mateus\",\r\n        \"pedidos\": []\r\n    },\r\n    \"produtoList\": [\r\n        {\r\n            \"id\": \"638ceee7ee18d72fe433adac\",\r\n            \"dataCadastro\": \"2022-12-04T19:03:03.148+00:00\",\r\n            \"nome\": \"Cupim 100g\",\r\n            \"preco\": 9.99,\r\n            \"descricao\": \"Espetinho médio\"\r\n        },\r\n        {\r\n            \"id\": \"638cef03ee18d72fe433adaf\",\r\n            \"dataCadastro\": \"2022-12-04T19:03:31.286+00:00\",\r\n            \"nome\": \"Picanha 100g\",\r\n            \"preco\": 19.99,\r\n            \"descricao\": \"Espetinho médio\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/garcom/garcom/638d3c9ded4a5b33c673f8a9/criar/pedido",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"garcom",
+										"638d3c9ded4a5b33c673f8a9",
+										"criar",
+										"pedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar pedido pelo id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/garcom/pedidos/638b72dc1d82a30ef6ab8655",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"pedidos",
+										"638b72dc1d82a30ef6ab8655"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar pedidos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/garcom/pedidos/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"pedidos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar pedido",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"638cc6caddadc36a3d64d13d\",\r\n    \"dataCadastro\": \"2022-12-04T16:11:54.404+00:00\",\r\n    \"valorPedido\": 25.98,\r\n    \"status\": \"FECHAR\",\r\n    \"viagem\": false,\r\n    \"garcom\": {\r\n        \"id\": \"638cbffcddadc36a3d64d13a\",\r\n        \"nome\": \"Mateus\",\r\n        \"dataCadastro\": \"2022-12-04T16:11:54.404+00:00\",\r\n        \"pedidos\": []\r\n    },\r\n    \"produtoList\": [\r\n        {\r\n            \"id\": \"638c0b31917b360143620d9c\",\r\n            \"dataCadastro\": \"2022-12-04T02:51:29.921+00:00\",\r\n            \"nome\": \"Cupim 100g\",\r\n            \"preco\": 12.99,\r\n            \"descricao\": \"Espetinho médio\"\r\n        },\r\n        {\r\n            \"id\": \"638c0b31917b360143620d9c\",\r\n            \"dataCadastro\": \"2022-12-04T02:51:29.921+00:00\",\r\n            \"nome\": \"Cupim 100g\",\r\n            \"preco\": 12.99,\r\n            \"descricao\": \"Espetinho médio\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/garcom/garcom/638cbffcddadc36a3d64d13a/atualizar/pedido",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"garcom",
+										"638cbffcddadc36a3d64d13a",
+										"atualizar",
+										"pedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar pedido",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/garcom/garcom/638bc63fd7724d76bc25a68f/deletar/pedido/638bc679d7724d76bc25a690",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"garcom",
+										"638bc63fd7724d76bc25a68f",
+										"deletar",
+										"pedido",
+										"638bc679d7724d76bc25a690"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Criar Garcom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Mateus\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/garcom/garcom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"garcom",
+								"garcom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar garcom pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/garcom/garcom/638ac4d435bf2e6acfc22a5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"garcom",
+								"garcom",
+								"638ac4d435bf2e6acfc22a5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar garcons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/garcom/garcom/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"garcom",
+								"garcom",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Garcom",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"638ac4d435bf2e6acfc22a5a\",\r\n        \"nome\": \"Vini\",\r\n        \"dataCadastro\": \"2022-12-03T03:39:00.887+00:00\",\r\n        \"pedidos\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/garcom/garcom/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"garcom",
+								"garcom",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Garcom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/garcom/garcom/deletar/638cbffcddadc36a3d64d13a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"garcom",
+								"garcom",
+								"deletar",
+								"638cbffcddadc36a3d64d13a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Administrador",
+			"item": [
+				{
+					"name": "Produtos",
+					"item": [
+						{
+							"name": "Criar Produto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Espeto de cafta\",\r\n    \"preco\": 11.90,\r\n    \"descricao\": \"Espetinho médio\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar Produto Pelo Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/638a6a0b273ee116a278d9d3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										"638a6a0b273ee116a278d9d3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar Produtos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar Produto Pelo Nome",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\":\"Espeto de Cupim\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar Produto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"638c0b99917b360143620da2\",\r\n    \"dataCadastro\": \"2022-12-04T02:53:13.205+00:00\",\r\n    \"nome\": \"Cupim 100g\",\r\n    \"preco\": 12.99,\r\n    \"descricao\": \"Espetinho médio\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/atualizar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										"atualizar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar Produto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/deletar/638a6e86e3e7ec34206243ff",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										"deletar",
+										"638a6e86e3e7ec34206243ff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar produto com preco maior que x",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"preco\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/administrador/produto/busca/preco",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"produto",
+										"busca",
+										"preco"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Busca Administradores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Administrador por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/638c0aef917b360143620d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"638c0aef917b360143620d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria Administrador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bruno\",\r\n    \"produtos\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Administrador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/deletar/638c0aef917b360143620d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"deletar",
+								"638c0aef917b360143620d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Administrador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bruno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/atualizar/638c0aef917b360143620d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"atualizar",
+								"638c0aef917b360143620d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador cria produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Picanha 100g\",\r\n    \"preco\": 19.99,\r\n    \"descricao\": \"Espetinho médio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/638ceed3ee18d72fe433adab/cadastro/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"638ceed3ee18d72fe433adab",
+								"cadastro",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Administrador Pelo Nome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bruno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador atualiza produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"638c0b31917b360143620d9c\",\r\n    \"nome\": \"Cupim 100g\",\r\n    \"preco\": 12.99,\r\n    \"descricao\": \"Espetinho médio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/638c0b7f917b360143620d9f/atualiza/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"638c0b7f917b360143620d9f",
+								"atualiza",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Administrador deleta produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"638a6e86e3e7ec34206243ff\",\r\n    \"nome\": \"Costela 100g\",\r\n    \"preco\": 9.99,\r\n    \"descricao\": \"Espetinho médio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/administrador/adm/63891b3fa68dcd059524b20c/deleta/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"administrador",
+								"adm",
+								"63891b3fa68dcd059524b20c",
+								"deleta",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Caixa",
+			"item": [
+				{
+					"name": "Criar Caixa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Jéssica\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar caixa pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/638bcbb0d7778f2f1b8597ce",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								"638bcbb0d7778f2f1b8597ce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar caixas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar caixas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"638bcbb0d7778f2f1b8597ce\",\r\n        \"nome\": \"Jessica\",\r\n        \"pedidos\": []\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Caixa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/deletar/638bd97d1442cb2c18f7dc42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								"deletar",
+								"638bd97d1442cb2c18f7dc42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caixa fecha pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/caixa/caixa/638d39705925021b0bb18cfd/fechar/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caixa",
+								"caixa",
+								"638d39705925021b0bb18cfd",
+								"fechar",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Git Config",
+			"item": [
+				{
+					"name": "Eureka Server",
+					"item": [
+						{
+							"name": "Eureka Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/eureka-server/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"eureka-server",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eureka Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8761/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8761",
+									"path": [
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Gateway",
+					"item": [
+						{
+							"name": "Gateway Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/gateway/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"gateway",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gateway/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gateway",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Administrador",
+					"item": [
+						{
+							"name": "Administrador Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/administrador/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"administrador",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Administrador Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/administrador/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"administrador",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Log",
+					"item": [
+						{
+							"name": "Log Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/log/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"log",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Log Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/log/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caixa Config",
+					"item": [
+						{
+							"name": "Caixa Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/caixa/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"caixa",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Caixa Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/caixa/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"caixa",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Garcom Config",
+					"item": [
+						{
+							"name": "Garcom Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/garcom/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"garcom",
+										"default"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Garcom Refresh",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/garcom/actuator/refresh",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"garcom",
+										"actuator",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Log",
+			"item": [
+				{
+					"name": "Buscar log pelo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/log/logs/638aad90011d930e090f5e8b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"638aad90011d930e090f5e8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/log/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca log por acao",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"action\":\"ADD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/log/logs/acao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"acao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca log por data de cadastro do adm",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataCadastro\":\"1670032500464\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/log/logs/adm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"adm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca log por data de produto cadastrado",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataCadastro\":\"1670032784805\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/log/logs/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca log por nome do adm",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Bruno\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/log/logs/nome/adm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"nome",
+								"adm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca log por nome do produto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Cupim 100g\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/log/logs/nome/produto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"log",
+								"logs",
+								"nome",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
